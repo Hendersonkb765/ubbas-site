@@ -21,6 +21,29 @@ use Jenssegers\Agent;
 */
 Route::domain('cidsol.ubbas.org')->group(function(){
 
+Route::get('/login',[AutentificacaoController::class,'index'])->name('login');
+Route::post('/login',[AutentificacaoController::class,'autenticar'])->name('auth_login');
+Route::get('/deslogar',[AutentificacaoController::class,'deslogar'])->name('auth_deslogar');
+
+Route::middleware('auth')->group(function(){
+   
+    Route::get('/cadastro-usuario',[RegistroController::class,'index'])->name('registrar_usuario');
+    Route::post('/cadastro-usuario',[AutentificacaoController::class,'registrarUsuario'])->name('cadastrar_usuario');
+
+
+    Route::controller(OngController::class)->group(function (){
+        Route::get('/cadastro-ong','index')->name('view_ong');
+        Route::post('/cadastro-ong','store')->name('cadastrar_ong');
+    });
+    
+
+    Route::controller(BeneficiariosController::class)->group(function (){
+        Route::get('/cadastro-beneficiario','create')->name('cad_familia');
+        Route::post('/cadastro-beneficiario','store')->name('cadastrar_beneficiario');
+        Route::get('/cadastro-beneficiario/busca','show')->name('busca_familia')->methods(['GET','POST']);
+
+    });
+
 /*
 Route::get('/',[HomeCestaController::class,'index'])->middleware('auth')->name('home_cesta');
 
@@ -56,32 +79,9 @@ Route::controller(BeneficiariosController::class)->group(function (){
 */
 
 
-Route::get('/login',[AutentificacaoController::class,'index'])->name('login');
-Route::post('/login',[AutentificacaoController::class,'autenticar'])->name('auth_login');
-Route::get('/deslogar',[AutentificacaoController::class,'deslogar'])->name('auth_deslogar');
-
-Route::middleware('auth')->group(function(){
-   
-    Route::get('/cadastro-usuario',[RegistroController::class,'index'])->name('registrar_usuario');
-    Route::post('/cadastro-usuario',[AutentificacaoController::class,'registrarUsuario'])->name('cadastrar_usuario');
-
-
-    Route::controller(OngController::class)->group(function (){
-        Route::get('/cadastro-ong','index')->name('view_ong');
-        Route::post('/cadastro-ong','store')->name('cadastrar_ong');
-    });
-    
-
-    Route::controller(BeneficiariosController::class)->group(function (){
-        Route::get('/cadastro-beneficiario','create')->name('cad_familia');
-        Route::post('/cadastro-beneficiario','store')->name('cadastrar_beneficiario');
-        Route::get('/cadastro-beneficiario/busca','show')->name('busca_familia')->methods(['GET','POST']);
-
-    });
-
 });
 
-//          
+         
 
 });
 /*
