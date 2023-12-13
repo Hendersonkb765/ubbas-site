@@ -3,7 +3,7 @@
    
     <div class="searchParameters">
         
-        <x-buscar.caixa-pesquisa id=""></x-buscar.caixa-pesquisa>
+        <x-buscar.caixa-pesquisa ></x-buscar.caixa-pesquisa>
         
         <x-buscar.selecao-organizacao></x-buscar.selecao-organizacao>
     

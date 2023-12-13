@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="{{asset('imagens/cidsol/LogoCidSolSimples.ico')}}">
-    <link rel="stylesheet" href="{{asset('css/cidsol/home.css')}}">
+    <link rel="icon" href="{{asset('img/imagens/cidsol/LogoCidSolSimples.ico')}}">
+    <link rel="stylesheet" href="{{asset('build/assets/home-3f42604b.css')}}">
     <title>{{$titulo}}</title>
 </head>
 <body>
@@ -18,14 +18,14 @@
 
             <div class="top">
 
-                <img class="logo" src="{{asset('/imagens/cidsol/LogoUbbasSimples.png')}}" alt="">
+                <img class="logo" src="{{asset('img/imagens/cidsol/LogoUbbasSimples.png')}}" alt="">
 
                 <div class="menu">
 
                     <a href="{{route('home_cesta')}}">
                         <div class="optMenu @if($pagina === 'painel') selected @endif">
 
-                        <img src="{{asset('/imagens/cidsol/home/menu.png')}}" alt="">
+                        <img src="{{asset('img/imagens/cidsol/home/menu.png')}}" alt="">
                         <p> Painel Principal </p>
         
                         </div>
@@ -35,7 +35,7 @@
                 <a href="{{route('cad_familia')}}">
                     <div class="optMenu @if($pagina === 'familias') selected @endif">
 
-                        <img src="{{asset('/imagens/cidsol/home/adc_family.png')}}" alt="">
+                        <img src="{{asset('img/imagens/cidsol/home/adc_family.png')}}" alt="">
                         <p> Cadastrar Família</p>
 
                     </div>
@@ -46,7 +46,7 @@
                 <a href="{{route('busca_familia')}}">
                     <div class="optMenu">
 
-                        <img src="{{asset('/imagens/cidsol/home/loupe.png')}}" alt="">
+                        <img src="{{asset('img/imagens/cidsol/home/loupe.png')}}" alt="">
                         <p> Buscar Cadastros </p>
 
                     </div>
@@ -55,7 +55,7 @@
                 <a href="{{route('registrar_usuario')}}">
                     <div class="optMenu">
 
-                        <img src="{{asset('/imagens/cidsol/home/user.png')}}" alt="">
+                        <img src="{{asset('img/imagens/cidsol/home/user.png')}}" alt="">
                         <p> Adicionar Usuário </p>
 
                     </div>
@@ -63,7 +63,7 @@
           
                     <div class="optMenu">
 
-                        <img src="{{asset('/imagens/cidsol/home/teamwork.png')}}" alt="">
+                        <img src="{{asset('img/imagens/cidsol/home/teamwork.png')}}" alt="">
                         <p>Adicionar Org</p>
 
                     </div>
@@ -76,7 +76,7 @@
 
                 <div class="optMenu">
 
-                    <img src="{{asset('/imagens/cidsol/home/exit.png')}}" alt="">
+                    <img src="{{asset('img/imagens/cidsol/home/exit.png')}}" alt="">
                     <p><a href="{{route('auth_deslogar')}}" style="text-decoration: none; color:white;"> Sair</a></p>
 
                 </div>

@@ -8,7 +8,7 @@
         <div class="card">
 
             <div class="head">
-                <img src="{{asset('/imagens/cidsol/home/family.png')}}" alt="">
+                <img src="{{asset('img/imagens/cidsol/home/family.png')}}" alt="">
                 <div class="infos">
 
                     <h2>Famílias Cadastradas</h2>
@@ -29,7 +29,7 @@
         <div class="card">
 
             <div class="head">
-                <img src="{{asset('/imagens/cidsol/home/receiving.png')}}" alt="">
+                <img src="{{asset('img/imagens/cidsol/home/receiving.png')}}" alt="">
                 <div class="infos">
 
                     <h2>Cadastros Ativos</h2>
@@ -49,7 +49,7 @@
         <div class="card">
 
             <div class="head">
-                <img src="{{asset('/imagens/cidsol/home/not_receiving.png')}}" alt="">
+                <img src="{{asset('img/imagens/cidsol/home/not_receiving.png')}}" alt="">
                 <div class="infos">
 
                     <h2>Cadastros Inativos</h2>
@@ -69,7 +69,7 @@
         <div class="card">
 
             <div class="head">
-                <img src="{{asset('/imagens/cidsol/home/add-group.png')}}" alt="">
+                <img src="{{asset('img/imagens/cidsol/home/add-group.png')}}" alt="">
                 <div class="infos">
 
                     <h2>Inclusão Pendente</h2>
@@ -89,7 +89,7 @@
         <div class="card">
 
             <div class="head">
-                <img src="{{asset('/imagens/cidsol/home/delete-group.png')}}" alt="">
+                <img src="{{asset('img/imagens/cidsol/home/delete-group.png')}}" alt="">
                 <div class="infos">
 
                     <h2>Exclusão Pendente</h2>
@@ -110,7 +110,7 @@
         <div class="card">
 
             <div class="head">
-                <img src="{{asset('/imagens/cidsol/home/edit-group.png')}}" alt="">
+                <img src="{{asset('img/imagens/cidsol/home/edit-group.png')}}" alt="">
                 <div class="infos">
 
                     <h2>Alteração Pendente</h2>
