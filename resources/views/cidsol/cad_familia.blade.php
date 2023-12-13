@@ -1,7 +1,7 @@
 @extends('cidsol/layout',['pagina'=>'familias','titulo'=>'Novo Cadastro'])
 
 @section('cadastro')
-    <link rel="stylesheet" href="{{asset('css/cidsol/cadastro.css')}}">
+    <link rel="stylesheet" href="{{asset('build/assets/cadastro-de28972e.css')}}">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-masker/1.1.0/vanilla-masker.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
    

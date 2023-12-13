@@ -9,9 +9,11 @@
 </head>
 <body>
  
-    
+
     @livewire('menssagem')
     @livewireScripts
+ 
+    
     <div class="container">
 
         <div class="sideBar">
