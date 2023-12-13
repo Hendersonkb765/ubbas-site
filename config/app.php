@@ -163,6 +163,8 @@ return [
         /*
          * Application Service Providers...
          */
+        Jenssegers\Agent\AgentServiceProvider::class,
+
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
         // App\Providers\BroadcastServiceProvider::class,
