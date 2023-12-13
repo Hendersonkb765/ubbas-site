@@ -3,7 +3,14 @@
    
     <div class="searchParameters">
         
-        <x-buscar.caixa-pesquisa ></x-buscar.caixa-pesquisa>
+        <!--<x-buscar.caixa-pesquisa ></x-buscar.caixa-pesquisa>-->
+        <div class="searchBox">
+
+            <img src="{{asset('img/imagens/cidsol/buscar/loupe.png')}}" alt="">
+        
+            <input wire:model="inputFilter" type="text" placeholder="Buscar por Ex. Maria dos Anjos" id="busca" >
+        
+        </div>
         
         <x-buscar.selecao-organizacao></x-buscar.selecao-organizacao>
     
@@ -18,7 +25,6 @@
     <div class="listBox">
 
 
-     
     @if ($dispositivo)
          @foreach ($beneficiarios as $familia)
         <x-mobile.card-beneficiarios
