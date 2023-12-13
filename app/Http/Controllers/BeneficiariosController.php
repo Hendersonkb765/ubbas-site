@@ -55,8 +55,7 @@ class BeneficiariosController extends Controller
      */
     public function store(Request $request)
     {
-        session()->flash('success','Famlia Cadastrada');
-       return redirect()->route('cad_familia');
+       
    
       try{
        

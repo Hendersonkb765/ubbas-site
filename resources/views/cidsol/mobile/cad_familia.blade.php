@@ -1,9 +1,9 @@
 @extends('cidsol/mobile/layout',['pagina'=>'familias','titulo'=>'Novo Cadastro'])
 
 @section('cadastro')
-<link rel="stylesheet" href="{{asset('css/cidsol/mobile/cadastro.css')}}">
-<script src="/scripts/menu.js" defer></script>
-<script src="/scripts/cadastro.js" defer></script>
+<link rel="stylesheet" href="{{asset('build/assets/cadastro-7f8479a2.css')}}">
+
+<script src="build/assets/cadastro.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-masker/1.1.0/vanilla-masker.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -23,7 +23,7 @@
             @if ($errors->get('nome'))
                   
                   @foreach ($errors->get('nome') as $erro)
-                    <p>{{$erro}}</p>
+                    <p style="color: red">{{$erro}}</p>
                   @endforeach
                 @endif
             <p class="labelError" id="labelNome"></p>
@@ -38,7 +38,7 @@
             @if ($errors->get('cpf'))
                   
                   @foreach ($errors->get('cpf') as $erro)
-                    <p>{{$erro}}</p>
+                    <p style="color: red">{{$erro}}</p>
                   @endforeach
                 @endif
             <p class="labelError" id="labelCpf"></p>
@@ -52,7 +52,7 @@
             @if ($errors->get('telefone'))
                   
                   @foreach ($errors->get('telefone') as $erro)
-                    <p>{{$erro}}</p>
+                    <p style="color: red">{{$erro}}</p>
                   @endforeach
                 @endif
             <p class="labelError" id="labelTel"></p>
@@ -66,7 +66,7 @@
             @if ($errors->get('cep'))
                   
                   @foreach ($errors->get('cep') as $erro)
-                    <p>{{$erro}}</p>
+                    <p style="color: red">{{$erro}}</p>
                   @endforeach
                 @endif
             <p class="labelError" id="labelCep"></p>
@@ -80,7 +80,7 @@
             @if ($errors->get('qtd_criancas'))
                   
                   @foreach ($errors->get('qtd_criancas') as $erro)
-                    <p>{{$erro}}</p>
+                    <p style="color: red">{{$erro}}</p>
                   @endforeach
                 @endif
             <p class="labelError"></p>
@@ -94,7 +94,7 @@
             @if ($errors->get('qtd_adolecentes'))
                   
                   @foreach ($errors->get('qtd_adolecentes') as $erro)
-                    <p>{{$erro}}</p>
+                    <p style="color: red">{{$erro}}</p>
                   @endforeach
                 @endif
             <p class="labelError"></p>
@@ -108,7 +108,7 @@
             @if ($errors->get('qtd_adultos'))
                   
                   @foreach ($errors->get('qtd_adultos') as $erro)
-                    <p>{{$erro}}</p>
+                    <p style="color: red">{{$erro}}</p>
                   @endforeach
                 @endif
             <p class="labelError"></p>
@@ -123,7 +123,7 @@
             @if ($errors->get('qtd_idosos'))
                   
                   @foreach ($errors->get('qtd_idosos') as $erro)
-                    <p>{{$erro}}</p>
+                    <p style="color: red">{{$erro}}</p>
                   @endforeach
                 @endif
             <p class="labelError"></p>
@@ -137,7 +137,7 @@
             @if ($errors->get('gestante'))
                   
             @foreach ($errors->get('gestante') as $erro)
-              <p>{{$erro}}</p>
+              <p style="color: red">{{$erro}}</p>
             @endforeach
           @endif
             <p class="labelError"></p>
@@ -151,7 +151,7 @@
             @if ($errors->get('qtd_cesta'))
                   
                   @foreach ($errors->get('qtd_cesta') as $erro)
-                    <p>{{$erro}}</p>
+                    <p style="color: red">{{$erro}}</p>
                   @endforeach
                 @endif
             <p class="labelError"></p>
