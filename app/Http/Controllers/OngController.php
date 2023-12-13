@@ -16,14 +16,16 @@ class OngController extends Controller
      */
     public function index()
     {
-       
-        if(Auth::user()->permissao != 'Observador'){
+       return view('cidsol/ong');
+       /*
+        if(Auth::user()->permissao == 'Master'){
             return view('ong');
 
         }
         else{
             return redirect()->back()->with('barrado','Não tem permissão');
         }
+        */
     }
 
     /**

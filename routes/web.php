@@ -57,7 +57,6 @@ Route::controller(BeneficiariosController::class)->group(function (){
 
 
 Route::get('/login',[AutentificacaoController::class,'index'])->name('login');
-
 Route::post('/login',[AutentificacaoController::class,'autenticar'])->name('auth_login');
 Route::get('/deslogar',[AutentificacaoController::class,'deslogar'])->name('auth_deslogar');
 
@@ -85,6 +84,7 @@ Route::middleware('auth')->group(function(){
 //          
 
 });
+/*
 Route::get('/login',[AutentificacaoController::class,'index'])->name('login');
 
 Route::post('/login',[AutentificacaoController::class,'autenticar'])->name('auth_login');
@@ -110,6 +110,7 @@ Route::middleware('auth')->group(function(){
     });
 
 });
+*/
 
 //PAGINA CURSOS
 Route::get('/', [HomeController::class, 'index']);

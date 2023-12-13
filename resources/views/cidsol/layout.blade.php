@@ -44,7 +44,6 @@
                 </a>
                 
                 @endif
-           
                 <a href="{{route('busca_familia')}}">
                     <div class="optMenu">
 

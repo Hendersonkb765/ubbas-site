@@ -24,19 +24,22 @@
 
             </div>
 
+            @if(Auth::user()->permissao != "Observador")
             <div class="optMenu @if($pagina ==='familias') selected @endif" onclick="fecharMenu()">
 
                 <img src="{{asset('img/imagens/cidsol/home/adc_family.png')}}" alt="">
                 <p><a href="{{route('cad_familia')}}"> Cadastrar Família </a></p>
 
             </div>
+            @endif
+
             <div class="optMenu" onclick="fecharMenu()">
 
                 <img src="{{asset('img/imagens/cidsol/home/loupe.png')}}" alt="">
                 <p><a href="{{route('busca_familia')}}"> Buscar Cadastros </a></p>
 
             </div>
-            
+            @if(Auth::user()->permissao === "Master")
                 <div class="optMenu">
 
                     <img src="{{asset('img/imagens/cidsol/home/user.png')}}" alt="">
@@ -47,9 +50,10 @@
             <div class="optMenu" onclick="fecharMenu()">
 
                 <img src="{{asset('img/imagens/cidsol/home/teamwork.png')}}" alt="">
-                <p>Adicionar Org</p>
+                <p><a href="{{route('view_ong')}}">Adicionar Org</a></p>
 
             </div>
+            @endif
 
             <div class="optMenu" id="exit" onclick="fecharMenu()">
 
