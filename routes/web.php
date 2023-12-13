@@ -20,13 +20,14 @@ use Jenssegers\Agent;
 |
 */
 Route::domain('cidsol.ubbas.org')->group(function(){
+    
 
-Route::get('/login',[AutentificacaoController::class,'index'])->name('login');
-Route::post('/login',[AutentificacaoController::class,'autenticar'])->name('auth_login');
-Route::get('/deslogar',[AutentificacaoController::class,'deslogar'])->name('auth_deslogar');
+    Route::get('/login',[AutentificacaoController::class,'index'])->name('login');
+    Route::post('/login',[AutentificacaoController::class,'autenticar'])->name('auth_login');
+    Route::get('/deslogar',[AutentificacaoController::class,'deslogar'])->name('auth_deslogar');
 
 Route::middleware('auth')->group(function(){
-   
+    Route::get('/',[HomeCestaController::class,'index'])->name('home_cesta');
     Route::get('/cadastro-usuario',[RegistroController::class,'index'])->name('registrar_usuario');
     Route::post('/cadastro-usuario',[AutentificacaoController::class,'registrarUsuario'])->name('cadastrar_usuario');
 
