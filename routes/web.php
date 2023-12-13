@@ -121,7 +121,6 @@ Route::get('/cadastrado', function(){
 Route::get('/cuidador-idosos', [CuidadorIdososController::class, 'index'])->name('cad_idosos');
 Route::post('/cuidador-idosos/cadastrando', [CuidadorIdososController::class, 'store'])->name('cadcuidador');
 Route::get('/buscar-mobile',[BeneficiariosController::class,'show'])->name('mobile_buscar');
-Route::get('/cidsol',[HomeCestaController::class,'index'])->middleware('auth')->name('home_cesta');
 Route::get('/cadastro-beneficiario/busca',[BeneficiariosController::class,'show'])->middleware('auth')->name('busca_familia');
 
 // 
