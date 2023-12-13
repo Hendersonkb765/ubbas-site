@@ -1,0 +1,547 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+:root{
+
+    --width_form: 500px;
+
+}
+
+*{
+
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Poppins;
+
+}
+
+.container{
+
+    width: 100%;
+    height: 100vh;
+    background: url(/imgCadastro/wp2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+}
+
+.form{
+
+    height: 800px;
+    width: var(--width_form);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    overflow-y:scroll;
+    overflow-x:hidden;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(25px);
+    border: 1px solid rgba(255,255,255,0.5);
+    border-bottom: 1px solid rgba(255,255,255,0.25);
+    border-left: 1px solid rgba(255,255,255,0.25);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.1);
+
+}
+
+.head{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+
+}
+
+.head h1{
+
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+
+}
+
+.head span{
+
+    size: 100px;
+
+}
+
+.form img{
+
+    height: 80px;
+    position: absolute;
+    transform: translateY(-70px);
+
+}
+
+.modal{
+
+    position: absolute;
+    height: 800px;
+    width: 500px;
+    z-index: 1;
+    /* background: rgba(255, 255, 255, 0.26); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: 0.5s;
+    visibility: hidden;
+
+}
+
+.modal .box{
+
+    width: 100px;
+    height: 100px;
+    background: rgb(59, 109, 180);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: 0.5s;
+
+}
+
+
+
+.modal .box::before{
+
+    content: '';
+
+    min-width: 250px;
+    height: 190px;
+    background-image: conic-gradient(transparent, transparent,transparent,transparent,#2bff00);
+    animation: loading 4s linear infinite;
+    transition: 0.5s;
+
+}
+
+.modal .box .box_internal{
+
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: rgb(59, 109, 180);
+    border-radius: 10px;
+    transition: 0.5s;
+
+}
+
+.box.failure{
+
+    border-radius: 50%;
+    background: #c00000;
+
+}
+
+.box.failure span:nth-child(1){
+
+    position: absolute;
+    height: 10px;
+    width: 60px;
+    background: white;
+    border-radius: 3px;
+    transform: rotate(50deg) scale(0);
+    animation: failure_1 0.5s forwards;
+
+}
+
+.box.failure span:nth-child(2){
+
+    position: absolute;
+    height: 10px;
+    width: 60px;
+    background: white;
+    border-radius: 3px;
+    transform: rotate(-50deg) scale(0);
+    animation: failure_2 0.5s forwards;
+
+}
+
+@keyframes failure_1{
+    
+    to{
+
+        transform: rotate(50deg) scale(1);
+
+    }
+
+}
+
+@keyframes failure_2{
+    
+    to{
+
+        transform: rotate(-50deg) scale(1);
+
+    }
+
+}
+
+
+
+
+.box.sucess{
+
+    border-radius: 50%;
+    background: #178b00;
+
+}
+
+.box.sucess span:nth-child(1){
+
+    height: 10px;
+    width: 40px;
+    border-radius: 3px;
+    background: white;
+    transform: translateX(15px) rotate(-50deg) scale(0);
+    animation: sucess_1 0.5s forwards;
+    
+
+}
+
+.box.sucess span:nth-child(2){
+
+    height: 10px;
+    width: 20px;
+    border-radius: 3px;
+    background: white;
+    transform: translateX(-25px) rotate(38deg) translateY(9px) scale(0);
+    animation: sucess_2 0.5s forwards;
+
+}
+
+@keyframes sucess_2{
+
+    to{
+
+        transform: translateX(-25px) rotate(38deg) translateY(9px) scale(1);
+
+    }
+
+}
+
+@keyframes sucess_1{
+
+    to{
+
+        transform: translateX(15px) rotate(-50deg) scale(1);
+
+    }
+
+}
+
+
+@keyframes loading {
+
+    0%{
+
+        transform: rotate(0deg);
+
+    }
+    100%{
+
+        transform: rotate(360deg);
+
+    }
+    
+}
+
+.inserts{
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    color: #fff;
+
+}
+
+.insert input{
+
+    outline: none;
+    color: #fff;
+    border: 5px;
+    background:rgba(0,0,0,0.2) ;
+    box-shadow: inset 0 0 15px rgba(0,0,0,0.25);
+    border: 1px solid rgba(0,0,0,0.5);
+    font-size: 1rem;
+    padding: 5px 5px;
+    width: 350px;
+    text-align: center;
+    transition: 0.5s;
+
+}
+
+.insert #rg{
+
+    width: 270px;
+
+}
+
+.insert #rg_digi{
+
+    width: 70px;
+
+}
+
+.insert span{
+
+    font-size: 0.7rem;
+    font-weight: 300;
+
+}
+
+.nome.invalido{
+
+    border: 1px solid rgb(255, 0, 0);
+    animation: invalido 0.2s;
+
+}
+
+.rg.invalido{
+    border: 1px solid rgb(255, 0, 0);
+    animation: invalido 0.2s;
+}
+
+.bairro.invalido{
+    border: 1px solid rgb(255, 0, 0);
+    animation: invalido 0.2s;
+}
+
+.rua.invalido{
+    border: 1px solid rgb(255, 0, 0);
+    animation: invalido 0.2s;
+}
+
+.numero.invalido{
+    border: 1px solid rgb(255, 0, 0);
+    animation: invalido 0.2s;
+}
+
+.cep.invalido{
+    border: 1px solid rgb(255, 0, 0);
+    animation: invalido 0.2s;
+}
+
+.contato.invalido{
+    border: 1px solid rgb(255, 0, 0);
+    animation: invalido 0.2s;
+}
+
+.rg_digi.invalido{
+
+    border: 1px solid rgb(255, 0, 0);
+    animation: invalido 0.2s;
+
+}
+
+@keyframes invalido {
+
+    0%, 100%{
+        transform: translateX(0);
+    }
+    30%{
+        transform: translateX(-20px)
+    }
+    70%{
+        transform: translateX(20px)
+    }
+    
+}
+
+.btn{
+
+    width: 150px;
+    height: 50px;
+    background: rgba(0, 156, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    border: 1px solid rgba(255,255,255,0.5);
+    border-bottom: 1px solid rgba(255,255,255,0.25);
+    border-left: 1px solid rgba(255,255,255,0.25);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.1);
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-bottom:20px;
+
+
+}
+
+.btn:hover{
+
+    background: rgba(0, 156, 0, 0.801);
+
+}
+
+@media (max-width: 525px)  {
+    
+    .form{
+
+        width: 400px;
+        gap: 30px;
+
+    }
+
+    .insert p{
+
+        width: 290px;
+
+    }
+
+    .insert input{
+
+        width: 290px;
+
+    }
+
+    .insert #rg{
+
+        width: 210px;
+    
+    }
+    
+    .insert #rg_digi{
+    
+        width: 70px;
+    
+    }
+
+
+
+}
+ 
+@media (max-width: 400px){
+
+    .form{
+
+        width: 300px;
+        gap: 20px;
+        height: 650px;
+
+    }
+
+    .head h1{
+
+        font-size: 1.2rem;
+
+    }
+
+    .insert p{
+
+        width: 230px;
+
+    }
+
+    .insert input{
+
+        width: 230px;
+        height: 30px;
+        font-size: 0.8rem;
+
+    }
+
+    .insert #rg{
+
+        width: 180px;
+    
+    }
+    
+    .insert #rg_digi{
+    
+        width: 50px;
+    
+    }
+
+
+}
+
+@media (max-height: 700px){
+
+    .form{
+
+        width: 300px;
+        gap: 5px;
+        height: 550px;
+
+    }
+
+    .head h1{
+
+        font-size: 1.2rem;
+
+    }
+
+    .inserts{
+
+        gap: 5px;
+
+    }
+
+    .insert p{
+        width: 230px;
+    }
+
+    .insert input{
+
+        width: 230px;
+        height: 30px;
+        font-size: 0.8rem;
+
+    }
+
+    .insert #rg{
+
+        width: 180px;
+    
+    }
+    
+    .insert #rg_digi{
+    
+        width: 50px;
+    
+    }
+}
+
+/* Gambiarra*/
+.certo{
+    margin-top: 30px;
+    height: 120px;
+
+}
+.bloco-certo{
+    
+    margin: 20px;
+    color: white;
+}
+::-webkit-scrollbar{
+    width:7px;
+    background-color:rgb(198,229,177,0.3);
+    border-radius:100px;
+}
+::-webkit-scrollbar-thumb:hover{
+     background-color:rgb(123,160,91);
+}
+::-webkit-scrollbar-thumb{
+    background-color:rgb(123,160,91,0.5);
+}
+
+
