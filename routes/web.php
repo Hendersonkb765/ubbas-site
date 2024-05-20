@@ -8,7 +8,7 @@ use App\Http\Controllers\HomeCestaController;
 use App\Http\Controllers\OngController;
 use App\Http\Controllers\BeneficiariosController;
 use App\Http\Controllers\RegistroController;
-use Jenssegers\Agent\Agent;
+use Jenssegers\Agent;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,6 +20,30 @@ use Jenssegers\Agent\Agent;
 |
 */
 Route::domain('cidsol.ubbas.org')->group(function(){
+    
+
+    Route::get('/login',[AutentificacaoController::class,'index'])->name('login');
+    Route::post('/login',[AutentificacaoController::class,'autenticar'])->name('auth_login');
+    Route::get('/deslogar',[AutentificacaoController::class,'deslogar'])->name('auth_deslogar');
+
+Route::middleware('auth')->group(function(){
+    Route::get('/',[HomeCestaController::class,'index'])->name('home_cesta');
+    Route::get('/cadastro-usuario',[RegistroController::class,'index'])->name('registrar_usuario');
+    Route::post('/cadastro-usuario',[AutentificacaoController::class,'registrarUsuario'])->name('cadastrar_usuario');
+
+
+    Route::controller(OngController::class)->group(function (){
+        Route::get('/cadastro-ong','index')->name('view_ong');
+        Route::post('/cadastro-ong','store')->name('cadastrar_ong');
+    });
+    
+
+    Route::controller(BeneficiariosController::class)->group(function (){
+        Route::get('/cadastro-beneficiario','create')->name('cad_familia');
+        Route::post('/cadastro-beneficiario','store')->name('cadastrar_beneficiario');
+        Route::get('/cadastro-beneficiario/busca','show')->name('busca_familia')->methods(['GET','POST']);
+
+    });
 
 /*
 Route::get('/',[HomeCestaController::class,'index'])->middleware('auth')->name('home_cesta');
@@ -56,15 +80,13 @@ Route::controller(BeneficiariosController::class)->group(function (){
 */
 
 
-Route::get('/login',function(Agent $agent){
-    if($agent->isMobile()){
-        return view('cidsol/mobile/login');
-    }
-    else{
-        return view('cidsol/login');
-    }
-    
-})->name('login');
+});
+
+         
+
+});
+/*
+Route::get('/login',[AutentificacaoController::class,'index'])->name('login');
 
 Route::post('/login',[AutentificacaoController::class,'autenticar'])->name('auth_login');
 Route::get('/deslogar',[AutentificacaoController::class,'deslogar'])->name('auth_deslogar');
@@ -89,10 +111,7 @@ Route::middleware('auth')->group(function(){
     });
 
 });
-
-//          
-
-});
+*/
 
 //PAGINA CURSOS
 Route::get('/', [HomeController::class, 'index']);
@@ -102,7 +121,6 @@ Route::get('/cadastrado', function(){
 Route::get('/cuidador-idosos', [CuidadorIdososController::class, 'index'])->name('cad_idosos');
 Route::post('/cuidador-idosos/cadastrando', [CuidadorIdososController::class, 'store'])->name('cadcuidador');
 Route::get('/buscar-mobile',[BeneficiariosController::class,'show'])->name('mobile_buscar');
-Route::get('/cidsol',[HomeCestaController::class,'index'])->middleware('auth')->name('home_cesta');
 Route::get('/cadastro-beneficiario/busca',[BeneficiariosController::class,'show'])->middleware('auth')->name('busca_familia');
 
 // 

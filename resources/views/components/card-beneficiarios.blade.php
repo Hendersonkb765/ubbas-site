@@ -19,7 +19,7 @@
 
                     <div class="head">
                         
-                        <img src="{{asset('imagens/cidsol/buscar/id-card.png')}}" alt="">
+                        <img src="{{asset('img/imagens/cidsol/buscar/id-card.png')}}" alt="">
                         <p>CPF</p>
 
                     </div>
@@ -30,7 +30,7 @@
 
                     <div class="head">
                                 
-                        <img src="{{asset('imagens/cidsol/buscar/telephone.png')}}" alt="">
+                        <img src="{{asset('img/imagens/cidsol/buscar/telephone.png')}}" alt="">
                         <p>Telefone</p>
 
                     </div>
@@ -41,7 +41,7 @@
 
                     <div class="head">
                         
-                        <img src="{{asset('imagens/cidsol/buscar/address.png')}}" alt="">
+                        <img src="{{asset('img/imagens/cidsol/buscar/address.png')}}" alt="">
                         <p>CEP</p>
 
                     </div>
@@ -62,7 +62,7 @@
 
                 <div class="otherInfo">
 
-                    <img src="{{asset('imagens/cidsol/buscar/boy.png')}}" alt="">
+                    <img src="{{asset('img/imagens/cidsol/buscar/boy.png')}}" alt="">
 
                     <p>{{$criancas}}</p>
 
@@ -70,7 +70,7 @@
                 <div class="otherInfo">
 
 
-                    <img src="{{asset('imagens/cidsol/buscar/teenager.png')}}" alt="">
+                    <img src="{{asset('img/imagens/cidsol/buscar/teenager.png')}}" alt="">
 
                     <p>{{$adolecentes}}</p>
 
@@ -78,7 +78,7 @@
                 <div class="otherInfo">
 
                     
-                    <img src="{{asset('imagens/cidsol/buscar/man.png')}}" alt="">
+                    <img src="{{asset('img/imagens/cidsol/buscar/man.png')}}" alt="">
                         
 
                     <p>{{$adultos}}</p>
@@ -88,7 +88,7 @@
 
                     
 
-                    <img src="{{asset('imagens/cidsol/buscar/old-man.png')}}" alt="">
+                    <img src="{{asset('img/imagens/cidsol/buscar/old-man.png')}}" alt="">
 
                     <p>{{$idosos}}</p>
 
@@ -97,7 +97,7 @@
 
                     
                     
-                    <img src="{{asset('imagens/cidsol/buscar/mother.png')}}" alt="">
+                    <img src="{{asset('img/imagens/cidsol/buscar/mother.png')}}" alt="">
 
                     <p>{{$gestante}}</p>
 
@@ -106,7 +106,7 @@
 
                     
 
-                    <img src="{{asset('imagens/cidsol/buscar/package.png')}}" alt="">
+                    <img src="{{asset('img/imagens/cidsol/buscar/package.png')}}" alt="">
 
                     <p>{{$cestas}}</p>
 
@@ -123,7 +123,7 @@
     <div class="alter">
         <div class="opcAlter disable" wire:click="alterarFamilia({{$id}})">
 
-            <img src="{{asset('imagens/cidsol/buscar/editar.png')}}" alt="">
+            <img src="{{asset('img/imagens/cidsol/buscar/editar.png')}}" alt="">
             <p >Alterar</p>
         </div>
     </div>

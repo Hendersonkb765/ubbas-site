@@ -2,8 +2,8 @@
 @section('buscar')
 <head>
     <link rel="stylesheet" href="padraoM.css">
-    <link rel="stylesheet" href="{{asset('css/cidsol/mobile/buscar.css')}}">
-    <script src="{{asset('js/cidsol/buscar.js')}}" defer></script>
+    <link rel="stylesheet" href="{{asset('build/assets/buscar-ff8a8cd3.css')}}">
+    <script src="{{asset('build/assets/buscar-4ed993c7.js')}}" defer></script>
     <title>Painel Principal</title>
 </head>
 
@@ -17,15 +17,6 @@
 @livewireScripts
 
 </div>    
-    
-    
-
-
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-
-   
-
-
-
 @endsection

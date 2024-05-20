@@ -2,7 +2,7 @@
 
 @section('buscar')
 <head>
-    <link rel="stylesheet" href="{{asset('css/cidsol/buscar.css')}}">
+    <link rel="stylesheet" href="{{asset('build/assets/buscar-7cb2fbda.css')}}">
    
 </head>
 <script>

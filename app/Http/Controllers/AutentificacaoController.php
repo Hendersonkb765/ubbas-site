@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Validation\Rule;
 use Illuminate\Support\Facades\Validator;
+use Jenssegers\Agent\Agent;
 
 use App\Models\User;
 class AutentificacaoController extends Controller
@@ -24,6 +25,14 @@ class AutentificacaoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+    public function index(Agent $agent){
+        if($agent->isMobile()){
+            return view('cidsol/mobile/login');
+        }
+        else{
+            return view('cidsol/login');
+        }
+    }
     public function autenticar(Request $request)
     {
         // PARA CADASTRAR OS USUARIOS É SO TIRAR O CÓDIGO DO COMENTARIO ALTERAR AS INFORMAÇÕES E ABRIR O 

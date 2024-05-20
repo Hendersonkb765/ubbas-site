@@ -1,7 +1,7 @@
 <div class="searchBox">
 
-    <img src="{{asset('imagens/cidsol/buscar/loupe.png')}}" alt="">
+    <img src="{{asset('img/imagens/cidsol/buscar/loupe.png')}}" alt="">
 
-    <input wire:model="inputFilter" type="text" placeholder="Buscar por Ex. Maria dos Anjos" id="busca" onkeyup="procurar()">
+    <input wire:model="inputFilter" type="text" placeholder="Buscar por Ex. Maria dos Anjos" id="busca" value="ooisasdfkjashfj fsaf" >
 
 </div>

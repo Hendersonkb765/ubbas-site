@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{asset('css/cidsol/mobile/login.css')}}">
+    <link rel="stylesheet" href="{{asset('build/assets/login-c7c0b786.css')}}">
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="{{asset('js/cidsol/login.js')}}" defer></script>
+    <script src="{{asset('build/assets/login-3570bb0a.js')}}" defer></script>
     <title>Entrar - CidSol</title>
 </head>
 <body>
@@ -23,11 +23,11 @@
 
         <div class="header">
 
-            <img src="{{asset('imagens/cidsol/LogoUbbasSimples.png')}}" alt="">
+            <img src="{{asset('img/imagens/cidsol/LogoUbbasSimples.png')}}" alt="">
 
             <h1>CidSol</h1>
 
-            <img src="{{asset('imagens/cidsol/login/LogoCidSolSimples.png')}}" alt="">
+            <img src="{{asset('img/imagens/cidsol/login/LogoCidSolSimples.png')}}" alt="">
 
         </div>
 

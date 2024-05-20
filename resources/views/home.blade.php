@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--<link rel="stylesheet" href="{{asset('build/assets/style-home-a6f7159b.css')}}">-->
-    @vite(['resources/css/style-home.css'])
+    <link rel="stylesheet" href="{{asset('build/assets/style-home-6fedc3cf.css')}}">
    <title>UBBAS</title>
 </head>
 <body>
@@ -16,15 +15,15 @@
 
         <div class="modos" id="seletor">
 
-            <div class="imgBox" id="moon"><img src="{{asset('build/img/imgHome/moon.png')}}" alt=""></div>
-            <div class="imgBox" id="sun"><img src="{{asset('build/img/imgHome/sun.png')}}" alt=""></div>
+            <div class="imgBox" id="moon"><img src="{{asset('img/imgHome/moon.png')}}" alt=""></div>
+            <div class="imgBox" id="sun"><img src="{{asset('img/imgHome/sun.png')}}" alt=""></div>
             
 
         </div>
 
         <div class="header">
 
-            <img src="{{asset('build/img/imgHome/logo originall.png')}}" alt="">
+            <img src="{{asset('img/imgHome/logo originall.png')}}" alt="">
 
             <div class="menu">
 
@@ -86,7 +85,7 @@
 
             </div>
 
-            <img src="{{asset('build/img/imgHome/equip.jpg')}}" alt="">
+            <img src="{{asset('img/imgHome/equip.jpg')}}" alt="">
 
         </div>
 
@@ -118,13 +117,13 @@
     
                 </div>
     
-                <img src="{{asset('build/img/imgHome/ai1.jpg')}}" alt="">
+                <img src="{{asset('img/imgHome/ai1.jpg')}}" alt="">
 
             </div>
 
             <div class="bloco">
 
-                <img src="{{asset('build/img/imgHome/familia.jpg')}}" alt="">
+                <img src="{{asset('img/imgHome/familia.jpg')}}" alt="">
 
                 <div class="textos">
 
@@ -159,7 +158,7 @@
 
                 <div class="superior">
 
-                    <img src="{{asset('build/img/imgHome/heart.png')}}" alt="">
+                    <img src="{{asset('img/imgHome/heart.png')}}" alt="">
                     <div class="infos">
 
                         <p>Mais de</p>
@@ -190,14 +189,14 @@
 
                 <div class="local">
 
-                    <a href="https://goo.gl/maps/JXt7fusyzDbP9se46"><img src="{{asset('build/img/imgHome/uniao.jpg')}}" alt=""></a>
+                    <a href="https://goo.gl/maps/JXt7fusyzDbP9se46"><img src="{{asset('img/imgHome/uniao.jpg')}}" alt=""></a>
                     <p>União de Vila Nova, São Paulo, Zona Leste - SP</p>
 
                 </div>
 
                 <div class="local">
 
-                    <a href="https://goo.gl/maps/1fQTjCYupnfLS3uS8"><img src="{{asset('build/img/imgHome/lapena.jpg')}}" alt=""></a>
+                    <a href="https://goo.gl/maps/1fQTjCYupnfLS3uS8"><img src="{{asset('img/imgHome/lapena.jpg')}}" alt=""></a>
                     <p>Jardim Lapena, São Paulo, Zona Leste - SP</p>
 
                 </div>
@@ -251,12 +250,12 @@
     
                         <p class="nome">José Edilson (Fundador)</p>
                         <div class="modulo">                    
-                            <a href="https://wa.me/5511946026591"><img src="i{{asset('build/img/imgHome/whatsapp.png')}}" alt=""></a>
+                            <a href="https://wa.me/5511946026591"><img src="i{{asset('img/imgHome/whatsapp.png')}}" alt=""></a>
                             <p class="info">(11) 94602-6591</p>
                         </div>
                         <div class="modulo">
     
-                            <img class="mail" src="{{asset('build/img/imgHome/mail.png')}}" alt="">
+                            <img class="mail" src="{{asset('img/imgHome/mail.png')}}" alt="">
                             <p class="info">edilson@ubbas.org</p>
     
                         </div>
@@ -269,12 +268,12 @@
                         <p class="nome">Hathos Gomes (Assessor)</p>
     
                         <div class="modulo">                    
-                            <a href="https://wa.me/5511947773318"><img src="{{asset('build/img/imgHome/whatsapp.png')}}" alt=""></a>
+                            <a href="https://wa.me/5511947773318"><img src="{{asset('img/imgHome/whatsapp.png')}}" alt=""></a>
                             <p class="info">(11) 94777-3318</p>
                         </div>
                         <div class="modulo">
     
-                            <img class="mail" src="{{asset('build/img/imgHome/mail.png')}}" alt="">
+                            <img class="mail" src="{{asset('img/imgHome/mail.png')}}" alt="">
                             <p class="info">hathos@ubbas.org</p>
     
                         </div>
@@ -283,7 +282,7 @@
     
                     <div class="modulo">
     
-                        <img class="mail" src="{{asset('build/img/imgHome/mail.png')}}" alt="">
+                        <img class="mail" src="{{asset('img/imgHome/mail.png')}}" alt="">
                         <p class="info">contato@ubbas.org</p>
     
                     </div>
@@ -311,7 +310,7 @@
                     <h3>Redes Sociais</h3>
                     <div class="icons">
 
-                        <a href="https://www.facebook.com/uniaobeneficentebrasileira"><img src="{{asset('build/img/imgHome/facebook.png')}}" alt=""></a>
+                        <a href="https://www.facebook.com/uniaobeneficentebrasileira"><img src="{{asset('img/imgHome/facebook.png')}}" alt=""></a>
 
                     </div>
 

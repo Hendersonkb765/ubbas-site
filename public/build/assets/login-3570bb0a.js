@@ -1,0 +1,1 @@
+chkBoxRmbMe=document.querySelector("#rmbMe");
